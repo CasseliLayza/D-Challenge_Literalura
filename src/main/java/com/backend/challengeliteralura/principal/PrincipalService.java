@@ -117,8 +117,8 @@ public class PrincipalService {
     }
 
     private void ObtenerDatosBusquedaPorTitulo(String inputText) {
-        String json = consumoApiService.obtenerDatos(URL_BASE + inputText);
-        System.out.println(json);
+        String json = consumoApiService.obtenerDatos(URL_BASE + inputText.toLowerCase().replace(" ","+"));
+        System.out.println("DatosJSON"+json);
 
         DatosBusqueda datosBusqueda = conversor.obtenerDatos(json, DatosBusqueda.class);
         System.out.println(datosBusqueda);//

@@ -29,7 +29,7 @@ public class LibroService implements ILibroService {
 
     @Override
     public Libro registrarLibro(Libro libro) {
-        LOGGER.info("libro --> {}", libro);
+        //LOGGER.info("libro --> {}", libro);
 
         Libro LibroBuscado = libroRepository.findBytitulo(libro.getTitulo());
         Libro libroRegistrado = null;
